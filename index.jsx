@@ -1,8 +1,8 @@
 
-var child =  React.createElement('div', null, 'Hello Sam');
-var parent =  React.createElement('div', {className: 'green-box'}, child);
-
+let name = 'JSX'
 ReactDOM.render(
-  parent,
+  <div className='green-box'>
+    <div style={{ fontSize: '200%' }}>Hello {name}</div>
+  </div>,
   document.getElementById('content')
 );
