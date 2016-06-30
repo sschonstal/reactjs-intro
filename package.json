@@ -1,0 +1,15 @@
+{
+  "name": "react-intro",
+  "version": "0.0.1",
+  "description": "for basic intro to react presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Sam Schonstal",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
