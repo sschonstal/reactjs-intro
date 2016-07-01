@@ -1,16 +1,5 @@
 
-let name = 'Nested Components';
 class HelloBox extends React.Component {
-  render() {
-    return (
-    <div className='green-box'>
-      <BoxContents/>
-    </div>
-    );
-  }
-}
-
-class BoxContents extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -20,7 +9,7 @@ class BoxContents extends React.Component {
   }
   render() {
     return (
-        <div>
+      <div className='green-box'>
           <textarea rows="1" cols="20"/>
           <div style={{ fontSize: '200%' }}>counter {this.state.counter}</div>
         </div>
