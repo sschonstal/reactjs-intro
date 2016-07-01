@@ -1,5 +1,5 @@
 .green-box {
-    width: 250px;
+    display: inline-block;
     background-color: greenyellow;
     padding: 20px;
 }
