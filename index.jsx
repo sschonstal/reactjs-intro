@@ -1,12 +1,19 @@
+function HelloContent(props)  {
+    return (
+      <div>
+        <div className='logo-container'>
+          <img src={props.logo} className='logo'/>
+        </div>
+        <div style={{ fontSize: '200%' }}>Hello {props.name}</div>
+      </div>
+    );
+}
 
 class HelloBox extends React.Component {
-  render() {
+  render () {
     return (
       <div className='green-box'>
-        <div className='logo-container'>
-          <img src={this.props.logo} className='logo'/>
-        </div>
-        <div style={{ fontSize: '200%' }}>Hello {this.props.name}</div>
+        <HelloContent {...this.props}/>
       </div>
     );
   }
