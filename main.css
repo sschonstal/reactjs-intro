@@ -3,3 +3,17 @@
     background-color: greenyellow;
     padding: 20px;
 }
+
+.logo {
+    display: inline-block;
+    width: auto;
+    height: 150px;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+}
