@@ -13,6 +13,7 @@ class HelloBox extends React.Component {
 }
 
 ReactDOM.render(
-  <HelloBox name='from prop' logo="./images/vett.jpg"/>,
+  <HelloBox name='Corvette' logo="./images/vett.jpg"/>,
   document.getElementById('content')
 );
+
