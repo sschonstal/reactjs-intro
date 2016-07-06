@@ -1,4 +1,3 @@
-import { getCars } from 'getCars'
 
 function HelloContent(props)  {
     return (
@@ -19,15 +18,26 @@ class HelloBox extends React.Component {
     }
    this.next = this.next.bind(this)
   }
+
+  componentWillMount () {
+    this.setState({
+      cars: [ "./images/vett.jpg",
+        "./images/camero.jpeg",
+        "./images/challanger.jpeg",
+        "./images/gt.jpg",
+        "./images/viper.jpg",
+        "./images/mustang.jpg" ]
+    })
+  }
   next() {
       this.setState({
-      index: this.state.index === cars.length - 1 ? 0 : this.state.index + 1
+      index: this.state.index === this.state.cars.length - 1 ? 0 : this.state.index + 1
     })
   }
   render () {
     return (
       <div className='green-box'>
-        <HelloContent {...this.props} car={cars[this.state.index]} />
+        <HelloContent {...this.props} car={this.state.cars[this.state.index]} />
         <button  type="button" onClick={this.next}>Next </button>
       </div>
     );
@@ -35,6 +45,6 @@ class HelloBox extends React.Component {
 }
 
 ReactDOM.render(
-  <HelloBox name='from prop' cars={getCars()}/>,
+  <HelloBox name='from prop'/>,
   document.getElementById('content')
 );
