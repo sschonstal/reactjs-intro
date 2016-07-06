@@ -6,7 +6,7 @@ class HelloBox extends React.Component {
         <div className='logo-container'>
           <img src={this.props.logo} className='logo'/>
         </div>
-        <div style={{ fontSize: '200%' }}>Hello {this.props.name}</div>
+        <div className='content-text'>Hello {this.props.name}</div>
       </div>
     );
   }
