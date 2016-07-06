@@ -7,9 +7,14 @@
     "test": "test"
   },
   "author": "Sam Schonstal",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "webpack": "^1.13.1"
   }
 }
