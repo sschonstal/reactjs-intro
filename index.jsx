@@ -1,10 +1,10 @@
 function HelloContent (props) {
   return (
-    <div>
+    <div style={{float: 'left'}}>
       <div className='logo-container'>
-        <img src={props.car} className='logo'/>
+        <img src={props.car.img} className='logo'/>
       </div>
-      <div className='content-text'>Hello {props.name}</div>
+      <div className='content-text'>{props.car.name}</div>
     </div>
   )
 }
@@ -20,12 +20,12 @@ class HelloBox extends React.Component {
 
   componentWillMount () {
     this.setState({
-      cars: [ "./images/vett.jpg",
-        "./images/camero.jpeg",
-        "./images/challanger.jpeg",
-        "./images/gt.jpg",
-        "./images/viper.jpg",
-        "./images/mustang.jpg" ]
+      cars: [ {img: "./images/vett.jpg", name: "Chevrolet Corvett" },
+        {img: "./images/camero.jpeg", name: "Chevrolet Camero" },
+        {img: "./images/challanger.jpeg", name: "Dodge Challanger" },
+        {img: "./images/gt.jpg", name: "Ford GT" },
+        {img: "./images/viper.jpg", name: "Dodge viper" },
+        {img: "./images/mustang.jpg", name: "Ford Mustang" } ]
     })
   }
 
@@ -48,6 +48,6 @@ class HelloBox extends React.Component {
 }
 
 ReactDOM.render(
-  <HelloBox name='Corvette'/>,
+  <HelloBox/>,
   document.getElementById('content')
 );
