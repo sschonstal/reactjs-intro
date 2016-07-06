@@ -13,34 +13,52 @@ class HelloBox extends React.Component {
   constructor () {
     super()
     this.state = {
-      index: 0
+      cars: [ { img: "./images/vett.jpg", name: "Chevrolet Corvett" },
+        { img: "./images/camero.jpeg", name: "Chevrolet Camero" },
+        { img: "./images/challanger.jpeg", name: "Dodge Challanger" },
+        { img: "./images/gt.jpg", name: "Ford GT" },
+        { img: "./images/viper.jpg", name: "Dodge viper" },
+        { img: "./images/mustang.jpg", name: "Ford Mustang" } ]
     }
-    this.next = this.next.bind(this)
+
+    this.remove.bind(this)
   }
 
-  componentWillMount () {
-    this.setState({
-      cars: [ {img: "./images/vett.jpg", name: "Chevrolet Corvett" },
-        {img: "./images/camero.jpeg", name: "Chevrolet Camero" },
-        {img: "./images/challanger.jpeg", name: "Dodge Challanger" },
-        {img: "./images/gt.jpg", name: "Ford GT" },
-        {img: "./images/viper.jpg", name: "Dodge viper" },
-        {img: "./images/mustang.jpg", name: "Ford Mustang" } ]
-    })
-  }
 
-  next () {
+  remove (i) {
     this.setState({
-      index: this.state.index === this.state.cars.length - 1 ? 0 : this.state.index + 1
+      cars: this.state.cars.filter((car, mi) => {
+        if (i !== mi) {
+          return car
+        }
+      })
     })
   }
 
   render () {
     return (
-      <div className='green-box'>
-        <HelloContent {...this.props} car={this.state.cars[this.state.index]}/>
-        <div className="btn-container">
-          <button className="btn" type="button" onClick={this.next}>Next</button>
+      <div>
+        <div className='green-box'>
+
+          {this.state.cars.map((car, i) => (
+            <div>
+
+              <HelloContent car={car}/>
+
+              <div className="btn-container">
+                <button className="btn"
+                        type="button"
+                        onClick={(() => {
+                                            return () => {
+                                              this.remove(i);
+                                          }
+                                          })(i)}
+                  >Remove
+                </button>
+              </div>
+            </div>
+          ))
+          }
         </div>
       </div>
     );
@@ -48,6 +66,6 @@ class HelloBox extends React.Component {
 }
 
 ReactDOM.render(
-  <HelloBox name='from prop'/>,
+  <HelloBox />,
   document.getElementById('content')
 );
