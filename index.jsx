@@ -1,7 +1,7 @@
 class HelloContent extends React.Component {
   render () {
     return (
-      <div>
+      <div style={{ float: "left" }}>
         <div className='logo-container'>
           <img src={this.props.logo} className='logo'/>
         </div>
