@@ -11,20 +11,15 @@ class HelloBox extends React.Component {
   constructor () {
     super()
     this.state = {
-      index: 0
-    }
-    this.next = this.next.bind(this)
-  }
-
-  componentWillMount () {
-    this.setState({
+      index: 0,
       cars: [ {img: "./images/vett.jpg", name: "Chevrolet Corvett" },
         {img: "./images/camero.jpeg", name: "Chevrolet Camero" },
         {img: "./images/challanger.jpeg", name: "Dodge Challanger" },
         {img: "./images/gt.jpg", name: "Ford GT" },
         {img: "./images/viper.jpg", name: "Dodge viper" },
         {img: "./images/mustang.jpg", name: "Ford Mustang" } ]
-    })
+    }
+    this.next = this.next.bind(this)
   }
 
   next () {
