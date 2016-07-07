@@ -1,15 +1,11 @@
-class HelloContent extends React.Component {
-  render () {
-    return (
-      <div style={{ float: "left" }}>
-        <div className='logo-container'>
-          <img src={this.props.logo} className='logo'/>
-        </div>
-        <div className='content-text'>Hello {this.props.name}</div>
-      </div>
-    );
-  }
-}
+let HelloContent = (props) => (
+  <div style={{ float: "left" }}>
+    <div className='logo-container'>
+      <img src={props.logo} className='logo'/>
+    </div>
+    <div className='content-text'>{props.name}</div>
+  </div>
+)
 
 class HelloBox extends React.Component {
   render () {
