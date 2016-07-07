@@ -24,7 +24,6 @@ class HelloBox extends React.Component {
     this.remove.bind(this)
   }
 
-
   remove (i) {
     this.setState({
       cars: this.state.cars.filter((car, mi) => {
@@ -42,19 +41,11 @@ class HelloBox extends React.Component {
 
           {this.state.cars.map((car, i) => (
             <div>
-
               <HelloContent car={car}/>
-
               <div className="btn-container">
                 <button className="btn"
-                        type="button"
-                        onClick={(() => {
-                                            return () => {
-                                              this.remove(i);
-                                          }
-                                          })(i)}
-                  >Remove
-                </button>
+                        onClick={(() => {return () => this.remove(i)})(i)}
+                        type="button">Remove</button>
               </div>
             </div>
           ))
