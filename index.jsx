@@ -1,5 +1,4 @@
-function HelloContent (props) {
-  return (
+let HelloContent = (props) => (
     <div style={{float: 'left'}}>
       <div className='logo-container'>
         <img src={props.car.img} className='logo'/>
@@ -7,7 +6,6 @@ function HelloContent (props) {
       <div className='content-text'>{props.car.name}</div>
     </div>
   )
-}
 
 class HelloBox extends React.Component {
   constructor () {
