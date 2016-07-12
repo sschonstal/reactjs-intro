@@ -1,0 +1,29 @@
+{
+  "name": "reactjs-intro",
+  "version": "0.0.1",
+  "description": "introduction to react.js training",
+  "main": "index.html",
+  "scripts": {
+    "uglify": "uglifyjs node_modules/impress.js/js/impress.js > js/impress.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sschonstal/reactjs-intro.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "training",
+    "tutorial"
+  ],
+  "author": "Sam Schonstal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sschonstal/reactjs-intro/issues"
+  },
+  "homepage": "https://github.com/sschonstal/reactjs-intro",
+  "devDependencies": {
+    "impress.js": "^0.6.0",
+    "uglify-js": "^2.7.0"
+  }
+}
