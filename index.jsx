@@ -17,6 +17,7 @@ class HelloBox extends React.Component {
   }
 }
 
+
 ReactDOM.render(
   <HelloBox name='Corvette' logo="./images/vett.jpg"/>,
   document.getElementById('content')
